@@ -1,4 +1,4 @@
-<h1>Liste des livres à lire</h1>
+<h1>Liste des livres à lire absolument</h1>
 
 <% @all_books.each do |book| %>
 <p><a href="/books/<%=book.id%>"> <%= book.title%></a> - (<%= book.category.title %>)</p>

@@ -1,0 +1,15 @@
+<h1>Page du livre : <%= @book.title %></h1>
+<p> <%= @book.category_id%></p>
+
+
+
+<%= form_tag "/books/#{@book.id}", method:"patch" do %>
+<input type="text" name="title">
+<input type="submit" value="Modifier le titre">
+<% end %>
+
+<%= form_tag "/books/#{@book.id}", method:"delete" do %>
+<input type="submit" value="Supprimer le livre">
+<% end %>
+
+<a href="/books">Revenir en arrière </a>

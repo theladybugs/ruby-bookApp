@@ -1,0 +1,18 @@
+<h1>Liste des livres à lire</h1>
+
+<% @all_books.each do |book| %>
+<p><a href="/books/<%=book.id%>"> <%= book.title%></a> - (<%= book.category.title %>)</p>
+<% end %>
+
+<%= form_tag "/books", method:"post" do %>
+<input type="text" name="title" placeholder="Title">
+<select name="category_id">
+    
+    <% @all_categories.each do |category| %>
+        <option value="<%= category.id %>"><%= category.title %></option>
+    <% end %>
+    
+</select>
+<input type="submit" value="Ajouter à la liste">
+
+<% end %>

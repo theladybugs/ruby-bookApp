@@ -1,2 +1,12 @@
 <h1>Pages#home</h1>
-<p>Here</p>
+<p>Here is titi <%= @titi %></p>
+
+<% if @titi == 42 %>
+Super titi vaut 42
+<% else %>
+Dommage
+<% end %>
+
+<% @titi.times do |i| %>
+Hello <%= i %>
+<%end %>
